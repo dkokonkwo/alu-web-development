@@ -217,3 +217,31 @@ aside {
     flex: 1;
     overflow-y: auto;
 }
+
+/* images */
+body {
+    background-image: url("/images/trees.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(2px); /* Adjust the value for desired blur intensity */
+    z-index: -1;
+}
+
+.content {
+/* Styles for your page content */
+}
